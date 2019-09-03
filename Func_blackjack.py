@@ -3,11 +3,9 @@
 # Finally, if the sum (even after adjustment) exceeds 21, return 'BUST'
 
 def blackjack(a,b,c):
-    total=a+b+c
-    if total<=21:
-        return total;
-    elif total>21:
-        if a==11 or b==11 or c==11:
-            return total-10
-        else:
-            return 'Bust'
+    if sum((a,b,c))<=21:
+        return sum((a,b,c));
+    elif total>21 and 11 in (a,b,c):
+        return sum((a,b,c))-10
+    else:
+        return 'Bust'

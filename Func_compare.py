@@ -2,12 +2,6 @@
 
 def compare(a,b):
     if a%2==0 and b%2==0:
-        if a>b:
-            print(b)
-        else:
-            print(a)
-    elif a%2!=0 or b%2!=0:
-        if a>b:
-            print(a)
-        else:
-            print(b)
+        return min(a,b)
+    else:
+        return max(a,b)
